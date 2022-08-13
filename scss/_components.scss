@@ -1,0 +1,60 @@
+.banner-logo {
+    font-size: 100px;
+    margin-right: 20px;
+    width: 150px;
+    height: 150px;
+    border: 3px solid orange;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+}
+
+
+
+.banner-name {
+    font-size: 90px;
+    font-weight: 200;
+    color: rgb(173, 175, 177);
+    margin-bottom: 10px;
+}
+
+.banner-about {
+    font-size: 60px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    color: rgb(173, 175, 177);
+}
+
+.header .main {
+    &-wellcome {
+        font-size: 50px;
+        font-weight: 300;
+        color: orange;
+    }
+
+    &-about {
+        font-size: 40px;
+        color: rgb(173, 175, 177);
+        margin-bottom: 20px;
+    }
+
+    &-btn {
+        width: 50%;
+        margin: 0 auto;
+        font-size: 20px;
+        border-radius: 20px;
+        padding: 10px 15px;
+        border: 2px solid orange;
+        color: orange;
+        margin-bottom: 20px;
+        background-color: transparent;
+        transition: all 0.3s;
+        &:hover {
+            background-color: orange;
+            color: black;
+        }
+    }
+
+}

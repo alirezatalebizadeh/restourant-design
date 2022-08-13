@@ -1,0 +1,87 @@
+.header {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url(../images/bg.jpeg) no-repeat center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+.header .banner {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.header .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  min-width: 500px;
+  height: 50vh;
+  margin-bottom: 50px;
+}
+.header .main-wellcome {
+  margin-bottom: 80px;
+}
+
+.banner-logo {
+  font-size: 100px;
+  margin-right: 20px;
+  width: 150px;
+  height: 150px;
+  border: 3px solid orange;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: orange;
+}
+
+.banner-name {
+  font-size: 90px;
+  font-weight: 200;
+  color: rgb(173, 175, 177);
+  margin-bottom: 10px;
+}
+
+.banner-about {
+  font-size: 60px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  color: rgb(173, 175, 177);
+}
+
+.header .main-wellcome {
+  font-size: 50px;
+  font-weight: 300;
+  color: orange;
+}
+.header .main-about {
+  font-size: 40px;
+  color: rgb(173, 175, 177);
+  margin-bottom: 20px;
+}
+.header .main-btn {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 10px 15px;
+  border: 2px solid orange;
+  color: orange;
+  margin-bottom: 20px;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+.header .main-btn:hover {
+  background-color: orange;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=main.css.map */
