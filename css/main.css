@@ -57,26 +57,84 @@
   width: 33.3%;
   height: 33.3vw;
   position: relative;
+  overflow: hidden;
 }
 .gallery .card-wrapper .card:hover .card-over {
   opacity: 1;
+  z-index: 10;
 }
 .gallery .card-wrapper .card-over {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5;
-  background-color: rgba(121, 83, 48, 0.5);
+  background-color: rgba(24, 15, 7, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 1s;
   opacity: 0;
 }
 .gallery .card-wrapper .card img {
   object-fit: cover;
   opacity: 0.7;
-  z-index: 200;
+}
+
+.footer {
+  background-color: rgb(37, 37, 37);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 70vh;
+}
+.footer-about {
+  margin-left: 80px;
+}
+.footer-logo {
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+}
+.footer-header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.footer .sotial-media {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+.footer .sotial-media-item {
+  margin: 0 15px;
+}
+.footer .sotial-media-link {
+  color: rgb(201, 198, 192);
+  font-size: 50px;
+}
+.footer .sotial-media .blue:hover {
+  color: rgb(57, 57, 180);
+  transform: scale(1.25);
+}
+.footer .sotial-media .red:hover {
+  color: rgb(247, 0, 0);
+  transform: scale(1.25);
+}
+.footer .sotial-media .orange:hover {
+  color: rgb(214, 47, 25);
+  transform: scale(1.25);
+}
+.footer .sotial-media .white:hover {
+  color: aliceblue;
+  transform: scale(1.25);
+}
+.footer .bottom {
+  margin-bottom: 30px;
 }
 
 .banner-logo {
@@ -217,6 +275,31 @@
 .card-over-btn:hover {
   background-color: orange;
   color: black;
+}
+
+.footer-name {
+  color: rgb(199, 203, 207);
+  font-size: 70px;
+  font-weight: 500;
+}
+
+.footer-about {
+  color: rgb(199, 203, 207);
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.footer-logo {
+  font-size: 90px;
+  border-radius: 50%;
+  border: 3px solid orange;
+  color: orange;
+}
+
+.paragraph-footer {
+  color: rgb(173, 175, 175);
+  font-size: 25px;
+  margin-top: 60px;
 }
 
 * {

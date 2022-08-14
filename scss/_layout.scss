@@ -70,22 +70,24 @@
         width: 33.3%;
         height: 33.3vw;
         position: relative;
+        overflow: hidden;
+
         &:hover .card-over {
             opacity: 1;
-
+            z-index: 10;
         }
 
         &-over {
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 5;
             @extend %fullscreen;
-            background-color: rgba(121, 83, 48, 0.5);
+            background-color: rgba(24, 15, 7, 0.5);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            transition: all 1s;
             opacity: 0;
         }
 
@@ -93,8 +95,78 @@
             @extend %fullscreen;
             object-fit: cover;
             opacity: 0.7;
-            z-index: 200;
         }
     }
 
+}
+
+
+
+.footer {
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 70vh;
+
+    &-about {
+        margin-left: 80px;
+    }
+
+    &-logo {
+        margin-right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .sotial-media {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+
+        &-item {
+            margin: 0 15px;
+
+        }
+
+        &-link {
+            color: rgb(201, 198, 192);
+            font-size: 50px;
+        }
+
+        .blue:hover {
+            color: rgb(57, 57, 180);
+            transform: scale(1.25);
+        }
+
+        .red:hover {
+            color: rgb(247, 0, 0);
+            transform: scale(1.25);
+        }
+
+        .orange:hover {
+            color: rgb(214, 47, 25);
+            transform: scale(1.25);
+        }
+
+        .white:hover {
+            color: aliceblue;
+            transform: scale(1.25);
+        }
+    }
+
+    .bottom {
+        margin-bottom: 30px;
+    }
 }
