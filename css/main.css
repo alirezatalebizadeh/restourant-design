@@ -137,6 +137,124 @@
   margin-bottom: 30px;
 }
 
+.navbar {
+  position: relative;
+  z-index: 200;
+}
+.navbar-navigation {
+  display: flex;
+}
+.navbar-navigation-left {
+  width: 50vw;
+  height: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgb(51, 51, 51);
+  transition: opacity 0.7s;
+}
+.navbar-navigation .left-img {
+  width: 50%;
+  position: absolute;
+  border-radius: 10px;
+  opacity: 0.7;
+  box-shadow: 0 0 10px 30px rgb(39, 38, 38);
+}
+.navbar-navigation .img1 {
+  left: 5%;
+  top: 5%;
+}
+.navbar-navigation .img2 {
+  left: 10%;
+  top: 15%;
+}
+.navbar-navigation .img3 {
+  left: 20%;
+  top: 25%;
+}
+.navbar-navigation-right {
+  width: 50vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  height: 100vh;
+  background-color: rgb(14, 13, 13);
+  transition: opacity 0.5s;
+}
+.navbar-navigation-right .list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-navigation-right .list-item {
+  list-style-type: none;
+}
+.navbar-navigation-right .list-link {
+  text-decoration: none;
+  color: rgb(148, 146, 144);
+  font-size: 55px;
+  display: block;
+  text-align: center;
+  margin: 20px;
+  transition: all 0.2s;
+}
+.navbar-navigation-right .list-link:hover {
+  color: orange;
+  letter-spacing: 2px;
+}
+.navbar-menu {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  z-index: 2000;
+}
+.navbar-menu .menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: transform 0.5s;
+}
+.navbar-menu .menu-line {
+  background-color: orange;
+  width: 100%;
+  height: 4px;
+  transform-origin: right;
+  transition: all 0.5s 0.5s;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+  opacity: 1;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right {
+  opacity: 1;
+}
+
+.checkbox:checked ~ .navbar-menu .menu {
+  transform: rotateZ(2700deg);
+}
+
+.checkbox:checked ~ .navbar-menu .menu-line-1 {
+  transform: rotateZ(-40deg);
+}
+
+.checkbox:checked ~ .navbar-menu .menu-line-2 {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .navbar-menu .menu-line-3 {
+  transform: rotateZ(40deg);
+}
+
 .banner-logo {
   font-size: 100px;
   margin-right: 20px;
