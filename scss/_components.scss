@@ -1,14 +1,48 @@
+$color-orange: orange;
+$color-bronz: rgb(185, 181, 181);
+$font-irannastaliq: IranNastaliq;
+$font-arial: Arial, Helvetica, sans-serif;
+
+@mixin flexlayout() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: IranNastaliq;
+    src: url("fonts/IranNastaliq.eot") format("eot"),
+        url("/fonts/IranNastaliq.ttf") format("ttf"),
+        url("/fonts/IranNastaliq.woff")format("woff");
+}
+
 .banner-logo {
     font-size: 100px;
     margin-right: 20px;
     width: 150px;
     height: 150px;
-    border: 3px solid orange;
+    border: 3px solid $color-orange;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: orange;
+    @include flexlayout();
+    color: $color-orange;
+
+    @media (max-width: 1000px) {
+        font-size: 75px;
+        width: 120px;
+        height: 120px;
+    }
+
+    @media (max-width: 800px) {
+        font-size: 60px;
+        width: 90px;
+        height: 90px;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 50px;
+        width: 80px;
+        height: 80px;
+    }
 }
 
 
@@ -16,81 +50,210 @@
 .banner-name {
     font-size: 90px;
     font-weight: 200;
-    color: rgb(173, 175, 177);
+    font-family: $font-arial;
+    color: $color-bronz;
     margin-bottom: 10px;
+
+    @media (max-width: 1200) {
+        font-size: 70px;
+    }
+
+    @media (max-width: 800px) {
+        font-size: 55px;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 40px;
+    }
 }
 
 .banner-about {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 200;
+    margin-left: 70px;
+    font-family: $font-arial;
+
     letter-spacing: 1px;
-    color: rgb(173, 175, 177);
+    color: $color-bronz;
+
+    @media (max-width: 1200) {
+        font-size: 40px;
+    }
+
+    @media (max-width: 800px) {
+        font-size: 30px;
+        margin-left: 20px;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 20px;
+    }
 }
 
 .header .main {
     &-wellcome {
-        font-size: 50px;
+        font-size: 60px;
         font-weight: 300;
-        color: orange;
+        font-family: $font-irannastaliq;
+        color: $color-orange;
+
+        @media (max-width: 1200) {
+            font-size: 50px;
+        }
+
+        @media (max-width: 800px) {
+            font-size: 40px;
+        }
+
+        @media (max-width: 450px) {
+            font-size: 30px;
+        }
     }
 
     &-about {
-        font-size: 40px;
-        color: rgb(173, 175, 177);
+        font-size: 50px;
+        color: $color-bronz;
         margin-bottom: 20px;
+        font-family: $font-arial;
+
+
+        @media (max-width: 1200) {
+            font-size: 40px;
+        }
+
+        @media (max-width: 800px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 450px) {
+            font-size: 20px;
+        }
     }
 
     &-btn {
         width: 50%;
         margin: 0 auto;
-        font-size: 20px;
+        font-size: 25px;
         border-radius: 20px;
-        padding: 15px 15px;
-        border: 2px solid orange;
-        color: orange;
+        font-family: $font-irannastaliq;
+        border: 2px solid $color-orange;
+        color: $color-orange;
         margin-bottom: 20px;
         background-color: transparent;
         transition: all 0.3s;
         cursor: pointer;
 
-
         &:hover {
-            background-color: orange;
+            background-color: $color-orange;
             color: black;
+        }
+
+        @media (max-width: 1200) {
+            width: 45%;
+        }
+
+        @media (max-width: 800px) {
+            width: 40%;
+        }
+
+        @media (max-width: 450px) {
+            width: 35%;
         }
     }
 
 }
 
 .about-name {
-    color: orange;
+    color: $color-orange;
     font-size: 40px;
+    font-family: $font-irannastaliq;
     font-weight: 300;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+
+    @media (max-width: 450px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 800px) {
+        font-size: 35px;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 32px;
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 35px;
+        margin-top: 20px;
+    }
+
 }
 
 .about-about {
-    color: rgb(173, 175, 177);
+    color: $color-bronz;
     font-size: 50px;
     font-weight: 300;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+
+    @media (max-width: 450px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 800px) {
+        font-size: 35px;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 32px;
+    }
 }
 
 .stars {
-    color: orange;
+    color: $color-orange;
     margin-bottom: 40px;
+
+    @media (max-width: 286px) {
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 450px) {
+        margin-bottom: 15px;
+
+    }
+
+    @media (max-width: 800px) {
+        margin-bottom: 25px;
+
+    }
+
+    @media (max-width: 600px) {
+        margin-bottom: 20px;
+    }
 }
 
 .star {
-    margin: 0 5px;
-    font-size: 15px;
+    margin: 0 7px;
+    font-size: 17px;
+
+    @media (max-width: 450px) {
+        font-size: 12px;
+    }
+
+    @media (max-width: 800px) {
+        font-size: 15px;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 13px;
+    }
 }
 
 .description {
     text-align: justify;
-    color: rgb(173, 175, 177);
-    line-height: 20px;
+    color: $color-bronz;
+    line-height: 40px;
     font-size: 20px;
+    font-family: $font-irannastaliq;
     margin-bottom: 40px;
     text-align-last: right;
 
@@ -98,24 +261,50 @@
         padding-right: 30px;
     }
 
+    @media (max-width: 286px) {
+        font-size: 8px;
+        margin-bottom: 0px;
+    }
+
+    @media (max-width: 376px) {
+        font-size: 10px;
+        line-height: 20px;
+    }
+
+    @media (max-width: 550px) {
+        font-size: 15px;
+    }
+
+}
+
+.menu-line {
+    background-color: $color-orange;
 }
 
 .about-btn {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 25px;
+    font-family: $font-irannastaliq;
     border-radius: 20px;
-    padding: 15px 15px;
-    border: 2px solid orange;
-    color: orange;
+    border: 2px solid $color-orange;
+    font-weight: 500;
+    color: $color-orange;
     margin-bottom: 20px;
     background-color: transparent;
     transition: all 0.3s;
     cursor: pointer;
 
+    @media (max-width: 550px) {
+        width: 100%;
+    }
+
+    @media (max-width: 800px) {
+        width: 70%;
+    }
 
     &:hover {
-        background-color: orange;
+        background-color: $color-orange;
         color: black;
     }
 }
@@ -123,32 +312,57 @@
 .card {
     &-over {
         &-heading {
-            font-size: 35px;
+            font-size: 32px;
             font-weight: 500;
             margin-bottom: 30px;
-            color: rgb(255, 254, 254);
+            color: $color-bronz;
+
+            @media (max-width:1000px) {
+                font-size: 30px;
+            }
         }
 
         &-paragraph {
             font-size: 35px;
             font-weight: 500;
             margin-bottom: 30px;
-            color: rgb(255, 255, 255);
+            color: $color-bronz;
+
+            @media (max-width:1000px) {
+                font-size: 30px;
+            }
         }
 
         &-btn {
             width: 50%;
             margin: 0 auto;
-            font-size: 22px;
-            font-weight: 500;
+            font-size: 30px;
+            font-weight: 700;
+            background-color: wheat;
+            font-family: $font-irannastaliq;
             border-radius: 20px;
-            padding: 15px 15px;
             border: none;
-            color: orange;
             margin-bottom: 20px;
-            background-color: white;
+            padding: 10px;
+            box-sizing: border-box;
+            color: $color-orange;
             transition: all 0.3s;
             cursor: pointer;
+
+            @media (max-width:1000px) {
+                font-size: 25px;
+                padding: 10px;
+            }
+
+            @media (max-width:750px) {
+                font-size: 20px;
+                padding: 5px;
+            }
+
+            @media (max-width:550px) {
+                font-size: 15px;
+                padding: 0;
+            }
 
             &:hover {
                 background-color: orange;
@@ -165,27 +379,118 @@
 
 
 .footer-name {
-    color: rgb(199, 203, 207);
-    font-size: 70px;
+    color: $color-bronz;
+    font-size: 60px;
     font-weight: 500;
+    font-family: $font-irannastaliq;
+    box-sizing: border-box;
+
+    @media (max-width: 377px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 40px;
+    }
+
 }
 
 .footer-about {
-    color: rgb(199, 203, 207);
-    font-size: 30px;
+    color: $color-bronz;
+    font-size: 40px;
     font-weight: 500;
+    font-family: $font-irannastaliq;
+    margin-bottom: 20px;
 
+    @media (max-width: 377px) {
+        font-size: 20px;
+        margin-left: 25px;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 30px;
+        margin-left: 20px;
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 35px;
+        margin-left: 25px;
+    }
 }
 
 .footer-logo {
     font-size: 90px;
     border-radius: 50%;
-    border: 3px solid orange;
-    color: orange;
+    border: 3px solid $color-orange;
+    color: $color-orange;
+
+    @media (max-width: 1000px) {
+        font-size: 75px;
+        width: 120px;
+        height: 120px;
+    }
+
+    @media (max-width: 800px) {
+        font-size: 60px;
+        width: 90px;
+        height: 90px;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 50px;
+        width: 80px;
+        height: 80px;
+    }
 }
 
 .paragraph-footer {
-    color: rgb(173, 175, 175);
+    color: $color-bronz;
     font-size: 25px;
     margin-top: 60px;
+    letter-spacing: 1px;
+    font-family: $font-irannastaliq;
+
+    @media (max-width: 1000px) {
+        font-size: 22;
+    }
+
+    @media (max-width: 800px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 18px;
+    }
+}
+
+.list-link {
+    text-decoration: none;
+    color: $color-bronz;
+    font-size: 55px;
+    display: block;
+    text-align: center;
+    margin: 20px;
+    transition: all 0.2s;
+
+    @media (max-width: 550px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 700px) {
+        margin: 30px 20px;
+        font-size: 40px;
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 50px;
+    }
+
+    @media (max-width: 550px) {
+        font-size: 30px;
+    }
+
+    &:hover {
+        color: $color-orange;
+        letter-spacing: 2px;
+    }
 }
